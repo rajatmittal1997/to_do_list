@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title%></title>
+    <script src="https://kit.fontawesome.com/448a6310cb.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="home.css">
+
+</head>
+
+<body>
+    <h1><i class="fas fa-list-ul"></i> ToDo App</h1>
+<div id="container">
+<div id="form">
+    <form action="/create-form" method="POST">
+        <label for="fname">DISCRIPTION</label>
+        <input type="text" id="discription" name="discription" required placeholder="What do you need to do?">
+
+        <hr>  
+
+        <label for="CATEGORY">CATEGORY</label>
+      <select id="category" name="category" required >
+        <option value="">Choose a category</option>
+        <option value="Personal" >Personal</option>
+        <option value="Work">Work</option>
+        <option value="School">School</option>
+        <option value="Cleaning">Cleaning</option>
+        <option value="Other">Other</option>
+      </select>
+
+    <label for="date">DUE DATE</label>
+    <input type="date" id="date"  name="date" required>
+
+    
+  
+    <button type="submit" id="add">ADD TASK</button> 
+    
+    
+  </form>
+
+</div>
+<hr>
+<div>
+  <form action="/delete-list" method="GET">
+    <table>
+      <tr>
+        <th>SELECT</th>
+        <th>TASK</th>
+        <th>CATEGORY</th>
+        <th>DATE</th>
+        <th></th>
+      </tr>
+      <% for (let i of form_data){%>
+      <tr>
+        <td><p><input type="checkbox" name="<%=i.id%>"></p></td>
+        <td><p><%= i.discription%></p></td>
+        <td><p><%= i.category%></p></td>
+        <td><p><i class="fas fa-calendar-alt"></i> &nbsp<%= i.date%></p></td>
+        <td><p>  <a href="/delete-data/?id=<%= i.id%>"><i class="fas fa-trash-alt"></i></a></p></td>
+
+      </tr>
+      
+      <%} %>
+    </table>
+    
+<div id="Del">
+  <input type="submit" value="Delete Multiple Task">
+</div>
+  </form>
+
+</div>
+</div>
+<script src="home.js"></script>
+</body>
+</html>

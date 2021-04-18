@@ -1,0 +1,75 @@
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif !important;
+    background-color: rgba(141, 150, 150, 0.774);
+}
+body h1{
+    text-align: center;
+    
+}
+#container{
+
+    width: 50%;
+    padding: 0% 20%;
+    border-radius: 10px 10px rgb(245, 240, 240);
+    background-color: beige;
+
+}
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input select {
+    width: 40%;
+    padding: 15px 20px;
+    margin: 8px 0;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+#add{
+    width: auto;
+    padding: 6px 6px;
+    text-align: center;
+    margin: 2px 4px;
+    color: rgb(193, 235, 42);
+    background-color: rgb(190, 60, 8);
+    border-radius: 8px;
+}
+  
+#form{
+    border-radius: 5px;
+    background-color: #814f4f;
+    padding: 20px;
+    font-family:Fantasy ;
+    font-size: large;
+  }
+.fas:hover{
+    color: red;
+}
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  #Del input[type="submit"]{
+    width: auto;
+    padding: 6px 6px;
+    text-align: center;
+    margin: 2px 4px;
+    color: rgb(179, 255, 0);
+    background-color: brown;
+    border-radius: 8px;
+  }
