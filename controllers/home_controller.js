@@ -1,6 +1,6 @@
 module.exports.home = function(req,res){
 
-    return res.render('home',{ title: "TODO App", form_data: formData});
+    return res.render('home',{ title: "TODO App", X: "aqua" ,form_data: formData});
 }
 
 

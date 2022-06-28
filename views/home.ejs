@@ -44,6 +44,9 @@
 <hr>
 <div>
   <form action="/delete-list" method="GET">
+    <div id="Del">
+      <input type="submit" value="Delete Multiple Task">
+    </div>
     <table>
       <tr>
         <th>SELECT</th>
@@ -53,7 +56,7 @@
         <th></th>
       </tr>
       <% for (let i of form_data){%>
-      <tr>
+      <tr style="background-color: <%=i.color%>">
         <td><p><input type="checkbox" name="<%=i.id%>"></p></td>
         <td><p><%= i.discription%></p></td>
         <td><p><%= i.category%></p></td>
@@ -65,9 +68,7 @@
       <%} %>
     </table>
     
-<div id="Del">
-  <input type="submit" value="Delete Multiple Task">
-</div>
+
   </form>
 
 </div>

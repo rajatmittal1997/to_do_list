@@ -12,6 +12,10 @@ discription:{
  category:{
     type: String ,
     require: true
+},
+color:{
+    type: String ,
+    require: false
 }
 })
 const DbSchema = mongoose.model('DbSchema',dbdata )
